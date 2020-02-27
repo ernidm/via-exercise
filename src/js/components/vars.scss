@@ -1,0 +1,52 @@
+$medSizeCardFactor: 0.8;	// a factor to resize the card to a medium size
+
+// device widths
+$mobile320-width: 320px;
+$mobile480-width: 480px;
+$mobile540-width: 540px;
+$tablet720-width: 720px;
+$tablet768-width: 768px;
+$tablet900-width: 900px;
+$desktop1280-width: 1280px;
+
+@mixin mobile320 {
+	@media (min-width: #{$mobile320-width}) and (max-width: #{$mobile480-width - 1}) {
+		@content;
+	}
+}
+
+@mixin mobile480 {
+	@media (min-width: #{$mobile480-width}) and (max-width: #{$mobile540-width - 1}) {
+		@content;
+	}
+}
+
+@mixin mobile540 {
+	@media (min-width: #{$mobile540-width}) and (max-width: #{$tablet720-width - 1}) {
+		@content;
+	}
+}
+
+@mixin tablet720 {
+	@media (min-width: #{$tablet720-width}) and (max-width: #{$tablet768-width - 1}) {
+		@content;
+	}
+}
+
+@mixin tablet768 {
+	@media (min-width: #{$tablet768-width}) and (max-width: #{$tablet900-width - 1}) {
+		@content;
+	}
+}
+
+@mixin tablet720-min {
+	@media (min-width: #{$tablet720-width}) {
+		@content;
+	}
+}
+
+@mixin tablet768-min {
+	@media (min-width: #{$tablet768-width}) {
+		@content;
+	}
+}

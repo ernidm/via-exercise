@@ -1,0 +1,136 @@
+@import "components/vars.scss";
+
+$driverTypeWidth: 3.5rem;
+$driverTypeHeight: 3.5rem;
+$driverTypeLeftPos: 0.9rem;
+$driverNameFontSize: 1.3rem;
+$driverSubDetailsFontSize: 1rem;
+$driverTypeBottom: $driverTypeHeight / 2;
+
+$contactCardWidth: 13.5rem;
+$contactCardDefaultHeight: 19.9rem;
+$contactCardPadding: 1.2rem;
+$contactCardMargin: 0.45rem;
+
+.contact-card {
+	width: $contactCardWidth;
+	height: $contactCardDefaultHeight;
+    padding: $contactCardPadding;
+	background-color: #ffffff;
+	margin: $contactCardMargin;
+	border-radius: 0.3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+	:hover .contact-card__details {
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+		transform: translate3d(0rem, -3rem, 0rem);
+	}
+
+	@include tablet720 {
+		width: $contactCardWidth * $medSizeCardFactor;
+		height: $contactCardDefaultHeight * $medSizeCardFactor;
+		padding: $contactCardPadding * $medSizeCardFactor;
+		margin: $contactCardMargin * $medSizeCardFactor * 2;
+	}
+}
+
+.contact-card--hidden {
+	display: none;
+}
+
+.contact-card__content {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.contact-card__driver-type {
+	background-size: $driverTypeWidth $driverTypeHeight;
+    width: $driverTypeWidth;
+    height: $driverTypeHeight;
+    position: absolute;
+    top: -$driverTypeBottom;
+    left: $driverTypeLeftPos;
+
+	@include tablet720 {
+		$driverTypeWidth: $driverTypeWidth * $medSizeCardFactor;
+		$driverTypeHeight: $driverTypeHeight * $medSizeCardFactor;
+
+		background-size: $driverTypeWidth $driverTypeHeight;
+		width: $driverTypeWidth;
+		height: $driverTypeHeight;
+		top: -$driverTypeBottom * $medSizeCardFactor;
+		left: $driverTypeLeftPos * $medSizeCardFactor;
+	}
+}
+
+.contact-card__driver-type--professional {
+	background-image: url("../../assets/svg/professional.svg");
+}
+
+.contact-card__driver-type--citizen {
+	background-image: url("../../assets/svg/citizen.svg");
+}
+
+.contact-card__details-inner {
+	padding-top: 2rem;
+
+	@include tablet720 {
+		padding-top: 2rem * $medSizeCardFactor;
+	}
+}
+
+.contact-card__details {
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	transform: translate3d(0rem, 0rem, 0rem);
+	color: #9f9f9f;
+	background-color: #ffffff;
+	position: relative;
+}
+
+.contact-card__details-name {
+	font-size: $driverNameFontSize;
+	margin-top: 0.5rem;
+	margin-bottom: 0.2rem;
+	font-weight: 500;
+
+	@include tablet720 {
+		font-size: $driverNameFontSize * $medSizeCardFactor;
+		margin-top: 0.5rem * $medSizeCardFactor;
+		margin-bottom: 0.2rem * $medSizeCardFactor;
+	}
+}
+
+.contact-card__details-rank, 
+.contact-card__details-phone, 
+.contact-card__details-email {
+	line-height: 1.6;
+	font-size: $driverSubDetailsFontSize;
+
+	@include tablet720 {
+		font-size: $driverSubDetailsFontSize * $medSizeCardFactor;
+	}
+}
+
+.contact-card__details-email {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.contact-card__image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70%;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center top;
+	}
+}
