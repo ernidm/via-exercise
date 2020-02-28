@@ -17,7 +17,7 @@ npm run dev
 ### Things to notice
 1. I didn't add ES6 Babel Preset, but it should run on any modern browser.
 2. If the API returns 404, no message is displayed - I will try to add it today.
-3. I didn't implement a loader when the data are being fetched- I didn't get around to it, I will try to do it today.
+3. I didn't implement a loader when the data is being fetched- I didn't get around to it, I will try to do it today.
 
 Other than that, everything should work just fine.
 
