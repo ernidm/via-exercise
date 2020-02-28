@@ -1,20 +1,8 @@
 @import "components/vars.scss";
 
-$driverTypeWidth: 3.5rem;
-$driverTypeHeight: 3.5rem;
-$driverTypeLeftPos: 0.9rem;
-$driverNameFontSize: 1.3rem;
-$driverSubDetailsFontSize: 1rem;
-$driverTypeBottom: $driverTypeHeight / 2;
-
-$contactCardWidth: 13.5rem;
-$contactCardDefaultHeight: 19.9rem;
-$contactCardPadding: 1.2rem;
-$contactCardMargin: 0.45rem;
-
 .contact-card {
 	width: $contactCardWidth;
-	height: $contactCardDefaultHeight;
+	height: $contactCardHeight;
     padding: $contactCardPadding;
 	background-color: #ffffff;
 	margin: $contactCardMargin;
@@ -31,7 +19,7 @@ $contactCardMargin: 0.45rem;
 
 	@include tablet720 {
 		width: $contactCardWidth * $medSizeCardFactor;
-		height: $contactCardDefaultHeight * $medSizeCardFactor;
+		height: $contactCardHeight * $medSizeCardFactor;
 		padding: $contactCardPadding * $medSizeCardFactor;
 		margin: $contactCardMargin * $medSizeCardFactor * 2;
 	}
@@ -136,5 +124,5 @@ $contactCardMargin: 0.45rem;
 }
 
 .contact-card__image-inner {
-	
+
 }

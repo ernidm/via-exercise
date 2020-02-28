@@ -1,4 +1,18 @@
-$medSizeCardFactor: 0.8;	// a factor to resize the card to a medium size
+// contact card dimension
+$driverTypeWidth: 3.5rem;
+$driverTypeHeight: 3.5rem;
+$driverTypeLeftPos: 0.9rem;
+$driverNameFontSize: 1.3rem;
+$driverSubDetailsFontSize: 1rem;
+$driverTypeBottom: $driverTypeHeight / 2;
+
+$contactCardWidth: 13.5rem;
+$contactCardHeight: 19.9rem;
+$contactCardPadding: 1.2rem;
+$contactCardMargin: 0.45rem;
+
+// a factor to resize the card to a medium size
+$medSizeCardFactor: 0.8;	
 
 // device widths
 $mobile320-width: 320px;

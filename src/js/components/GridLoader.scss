@@ -1,0 +1,17 @@
+@import "components/vars.scss";
+
+// shows only for 768+ devices
+.grid-loader {
+	opacity: 0;
+	transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	top: $contactCardHeight;
+	position: absolute;
+
+	@include tablet768-min {
+		opacity: 1;
+	}
+}
+
+.grid-loader--hidden {
+	opacity: 0;
+}

@@ -9,6 +9,8 @@ import * as actions from "store/actions.js";
 import MaterialSearchBar from "material-ui-search-bar";
 import ContactCard from "components/ContactCard.jsx";
 import SearchBar from "components/SearchBar.jsx";
+import ErrorMessage from "components/ErrorMessage.jsx";
+import GridLoader from "components/GridLoader.jsx";
 
 import shortid from "shortid";
 import { wrapGrid } from "animate-css-grid";
@@ -69,7 +71,14 @@ let ContactList = props => {
 			</div>
 
 			<section styleName="contact-list__content-grid">
-				<div styleName="contact-list__contact-cards" ref={contactCards} >
+				<ErrorMessage 
+					alertTitle="Error"
+					message="Unable to retrieve drivers' information"
+				/>
+
+				<GridLoader />
+
+				<div styleName={"contact-list__contact-cards" + (!driverDataArray ? " contact-list__contact-cards--hidden" : "")} ref={contactCards} >
 					{ 
 						driverDataArray !== null 
 							&& driverDataArray[0].id 
@@ -95,7 +104,7 @@ let ContactList = props => {
 function parseDriverDataArray(dataArray) {
 	let adjustedDataArray = 
 		dataArray.map(dataItem => parseDriverDataItem(dataItem));
-	log(adjustedDataArray);
+	// log(adjustedDataArray);
 
 	return adjustedDataArray;
 }

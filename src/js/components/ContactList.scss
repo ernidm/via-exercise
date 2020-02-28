@@ -56,10 +56,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 // needs refactoring
 .contact-list__contact-cards {
+	opacity: 1;
+	transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 	margin-top: 6.6rem;
 	margin-bottom: 12rem;
 	width: 70rem;
@@ -78,6 +81,10 @@
 	@media screen and (min-width: 720px) and (max-width: 768px - 1) {
 		margin-top: 1.8rem;
 	}
+}
+
+.contact-list__contact-cards--hidden {
+	opacity: 0;
 }
 
 .contact-list__search-bar { }

@@ -1,0 +1,38 @@
+@import "components/vars.scss";
+
+.error-message {
+	position: absolute;
+	top: 3rem;
+	opacity: 1;
+	transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+
+	// mui overrides
+	div:first-child {
+		background-color: #f1f1f1;
+	}
+		// mui overrides
+		div.MuiAlert-message {
+			font-size: 2rem;
+		}
+
+	@include tablet768-min {
+		// mui overrides
+		div:first-child div:nth-child(2) {
+			font-size: 1.3rem;
+		}
+		// mui overrides
+		div:first-child div:nth-child(2) {
+			font-size: 1.3rem;
+		}
+
+		div:first-child div:nth-child(2) div {
+			font-size: 1.5rem;
+		}
+		
+		top: $contactCardHeight;
+	}
+}
+
+.error-message--hidden {
+	opacity: 0;
+}

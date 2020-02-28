@@ -16,10 +16,9 @@ npm run dev
 
 ### Things to notice
 1. I didn't add ES6 Babel Preset, but it should run on any modern browser.
-2. If the API returns 404, no message is displayed - I will try to add it today.
-3. I didn't implement a loader when the data is being fetched- I didn't get around to it, I will try to do it today.
 
-Other than that, everything should work just fine.
+2. If the API returns 404 - an error message should display.\
+To test it, go to "modules/app-config.js" and use the second "URL_ENDPOINT_DRIVER_DATA_API".
 
 * I used Redux for global state management and thunks for async actions.
 * I used React Hooks and functional components (didn't separate to container/presentational components, felt like an overhead for this exercise).
