@@ -1,0 +1,8 @@
+.image {
+	opacity: 1;
+	transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.image--hidden {
+	opacity: 0;
+}

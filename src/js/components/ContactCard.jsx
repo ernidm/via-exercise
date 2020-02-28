@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import { withStyles } from '@material-ui/core/styles';
 import Tooltip from "@material-ui/core/Tooltip";
 
-import Img from "react-image";
-import NotFoundImage from "components/NotFoundImage.jsx";
+import Image from "components/Image.jsx";
 
 import "./ContactCard.scss";
 
@@ -33,7 +32,7 @@ let ContactCard = props => {
 		<div styleName={"contact-card" + (!isVisible ? " contact-card--hidden" : "")}>
 			<div styleName="contact-card__content">
 				<div styleName="contact-card__image">
-					<Img src={profileImage} unloader={<NotFoundImage />} crossOrigin="anonymous" />
+					<Image src={profileImage} />
 				</div>
 				<div styleName="contact-card__details">
 					<div styleName={"contact-card__driver-type" + ` ${getDriverTypeStyleNameWithModifier(type)}`}></div>	{/* "--citizen"/"--professional" */}
